@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Upload Cards</title>
+    <link rel="stylesheet" href="css/photo.css">
+</head>
+<body>
+    
+    <h1 class="page-title">Please submit all the required information</h1>
+    
+
+    <div class="container">
+        <div class="card" id="nid-card">
+            <img src="css/bgimg/job.png"class="img1">
+            <h3>NID Picture</h3>
+            <button class="add-btn" onclick="uploadFile('nid')">Add</button>
+        </div>
+        <div class="card" id="user-pic-card">
+            <img src="css/bgimg/job.png"class="img1">
+            <h3>Passport Size Picture</h3>
+            <button class="add-btn" onclick="uploadFile('user-pic')">Add</button>
+        </div>
+        <div class="card" id="doc-card">
+            <img src="css/bgimg/job.png"class="img1">
+            <h3>Document File</h3>
+            <button class="add-btn" onclick="uploadFile('doc')">Add</button>
+        </div>
+        <div class="card" id="extra1-card">
+            <img src="css/bgimg/job.png"class="img1">
+            <h3>Additional Document</h3>
+            <button class="add-btn" onclick="uploadFile('extra1')">Add</button>
+        </div>
+       
+    </div>
+
+   
+    <button class="submit-btn" onclick="submitImages()">Submit</button>
+
+    <script src="photo.js"></script>
+</body>
+</html>
