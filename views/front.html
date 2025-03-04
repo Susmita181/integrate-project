@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper Work.com</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: url('/css/bgimg/111.png') bottom center;
+            background-size: contain;
+            font-family: Arial, sans-serif;
+            position: relative;
+        }
+
+        .content-wrapper {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            padding-top: 50px;
+            z-index: 2;
+        }
+
+        .welcome-text {
+            color: #006400;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .title {
+            color: #008000;
+            font-size: 48px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .button-container {
+            background-color: rgba(144, 238, 144, 0.2);
+            padding: 30px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+            backdrop-filter: blur(5px);
+        }
+
+        .button {
+            padding: 12px 60px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #008000;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #006400;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <div class="welcome-text">Welcome to....</div>
+        <h1 class="title">Paper Work.com</h1>
+        
+        <div class="button-container">
+            <a href="/login" class="button">Login</a>
+            <a href="/signup" class="button">SignUp</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+/* signin css*/
+body {
+    background: linear-gradient(172deg, transparent, black);
+background-image: url(bgimg/22222.png);
+background-size: 1288px;
+overflow: hidden;
+font-family: Arial, sans-serif;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+margin: 0;
+background-color: #f7f7f7;
+background-position-x: center;
+background-position-y: -50px;
+}
+
+.form-container {
+    background-color: #9aff6e75;
+padding: 52px 66px 80px 44px;
+border-radius: 35px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+width: 300px;
+border: 3px solid #008000;
+}
+
+h2 {
+    color: green;
+text-align: center;
+margin-bottom: 20px;
+font-family: sans-serif;
+font-weight: 800;
+font-size: 41px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+input[type="submit"] {
+    font-family: sans-serif;
+width: 26%;
+padding: 10px;
+background-color: #008000;
+color: white;
+border: none;
+border-radius: 5px;
+font-size: 14px;
+cursor: pointer;
+}

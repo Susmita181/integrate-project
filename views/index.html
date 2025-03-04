@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Upload</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- Add Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Please submit all the required information</h1>
+        
+        <div class="upload-cards">
+            <div class="card">
+                <i class="fas fa-id-card fa-3x"></i>
+                <h3>NID Picture</h3>
+                <input type="file" id="nid" accept="image/*" style="display: none;">
+                <button onclick="document.getElementById('nid').click()" class="add-btn">Add</button>
+                <p class="status"></p>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-passport fa-3x"></i>
+                <h3>Passport Size Picture</h3>
+                <input type="file" id="passport" accept="image/*" style="display: none;">
+                <button onclick="document.getElementById('passport').click()" class="add-btn">Add</button>
+                <p class="status"></p>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-file-alt fa-3x"></i>
+                <h3>Document File</h3>
+                <input type="file" id="document" accept="image/*" style="display: none;">
+                <button onclick="document.getElementById('document').click()" class="add-btn">Add</button>
+                <p class="status"></p>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-file-upload fa-3x"></i>
+                <h3>Additional Document</h3>
+                <input type="file" id="additional" accept="image/*" style="display: none;">
+                <button onclick="document.getElementById('additional').click()" class="add-btn">Add</button>
+                <p class="status"></p>
+            </div>
+        </div>
+
+        <button id="submit-btn" class="submit-btn">Submit</button>
+    </div>
+    <script src="/js/script.js"></script>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.0/firebase-app.js";
+        import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.3.0/firebase-auth.js";
+        import { firebaseConfig } from "/js/firebase-config.js";
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+
+        onAuthStateChanged(auth, (user) => {
+            if (!user) {
+                window.location.href = '/login';
+            }
+        });
+    </script>
+</body>
+</html> 

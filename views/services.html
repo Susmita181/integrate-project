@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background: url('/css/bgimg/111.png') bottom center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .container {
+            padding: 40px 20px;
+        }
+
+        h1 {
+            color: #008000;
+            text-align: center;
+            font-size: 48px;
+            margin-bottom: 50px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .service-card {
+            background-color: rgba(204, 255, 204, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-icon {
+            font-size: 48px;
+            color: #008000;
+            margin-bottom: 20px;
+        }
+
+        .service-title {
+            color: #006400;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .service-description {
+            color: #006400;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Choose Our Service...</h1>
+        <div class="services-grid">
+            <div class="service-card" onclick="window.location.href='/option'">
+                <i class="fas fa-briefcase service-icon"></i>
+                <h2 class="service-title">Job Circular</h2>
+                <p class="service-description">Let us find the best job for you.</p>
+            </div>
+            <div class="service-card" onclick="window.location.href='/option'">
+                <i class="fas fa-plane service-icon"></i>
+                <h2 class="service-title">Travel</h2>
+                <p class="service-description">We will give you what you need for a better travel experience.</p>
+            </div>
+            <div class="service-card" onclick="window.location.href='/option'">
+                <i class="fas fa-book service-icon"></i>
+                <h2 class="service-title">Admission</h2>
+                <p class="service-description">We will do the paper work for your next educational journey</p>
+            </div>
+            <div class="service-card" onclick="window.location.href='/option'">
+                <i class="fas fa-stethoscope service-icon"></i>
+                <h2 class="service-title">Doctor Appointment</h2>
+                <p class="service-description">We will do the paper work for your doctor appointment</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
