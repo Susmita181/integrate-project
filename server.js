@@ -37,23 +37,33 @@ conn.once('open', () => {
 conn.on('error', (error) => {
     console.error('MongoDB connection error:', error);
 });
-
 // Create GridFS storage engine
 const storage = new GridFsStorage({
     url: process.env.MONGODB_URI,
     options: { useNewUrlParser: true, useUnifiedTopology: true },
     file: (req, file) => {
+        const filename = Date.now() + path.extname(file.originalname);
+        // Save to local filesystem
+        const localPath = path.join(__dirname, 'uploads', filename);
+        file.stream.pipe(fs.createWriteStream(localPath));
+        
         return {
-            filename: Date.now() + path.extname(file.originalname),
+            filename: filename,
             bucketName: 'uploads',
             metadata: {
                 type: req.body.type,
-                uploadDate: new Date()
+                uploadDate: new Date(),
+                localPath: localPath
             }
         };
     }
 });
 
+// Add this at the top of your file with other requires
+const fs = require('fs');
+
+// Add this to serve uploaded files statically
+app.use('/uploads', express.static('uploads'));
 const upload = multer({ storage });
 
 // Middleware
@@ -72,6 +82,7 @@ app.use((req, res, next) => {
         '/signup',
         '/services',  // Make sure this is added
         '/option',    // Add this line
+        '/joblist',    // Add this line
         '/js/firebase-config.js',
         '/css/style.css',
         'https://www.gstatic.com/firebasejs/11.3.0/firebase-app.js',
@@ -115,6 +126,19 @@ app.get('/manual', (req, res) => {
 });
 app.get('/services', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'services.html'));
+});
+
+// Add this new route for joblist
+app.get('/joblist', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'joblist.html'));
+});
+// Add these new routes
+app.get('/travel', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'travel.html'));
+});
+
+app.get('/hospital', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'hospital.html'));
 });
 app.post('/upload', upload.single('image'), async (req, res) => {
     try {
@@ -255,4 +279,11 @@ app.post('/submit', async (req, res) => {
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
+}).on('error', (err) => {
+    if (err.code === 'EADDRINUSE') {
+        console.log(`Port ${PORT} is busy, trying ${PORT + 1}...`);
+        app.listen(PORT + 1);
+    } else {
+        console.error('Server error:', err);
+    }
 });
