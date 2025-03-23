@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job List</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background: url('/css/bgimg/111.png') bottom center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .container {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #008000;
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+
+        .job-list {
+            display: grid;
+            gap: 20px;
+        }
+
+        .job-card {
+            background-color: rgba(204, 255, 204, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .job-title {
+            color: #006400;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .job-details {
+            color: #006400;
+            margin-bottom: 5px;
+        }
+
+        .apply-btn {
+            background-color: #008000;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .apply-btn:hover {
+            background-color: #006400;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Available Job Positions</h1>
+        <div class="job-list">
+            <div class="job-card">
+                <h2 class="job-title">Software Developer</h2>
+                <p class="job-details"><strong>Company:</strong> Tech Solutions Ltd.</p>
+                <p class="job-details"><strong>Location:</strong> Dhaka, Bangladesh</p>
+                <p class="job-details"><strong>Salary:</strong> $2000-$3000/month</p>
+                <button class="apply-btn">Apply Now</button>
+            </div>
+
+            <div class="job-card">
+                <h2 class="job-title">Marketing Manager</h2>
+                <p class="job-details"><strong>Company:</strong> Global Marketing Inc.</p>
+                <p class="job-details"><strong>Location:</strong> Chittagong, Bangladesh</p>
+                <p class="job-details"><strong>Salary:</strong> $1500-$2500/month</p>
+                <button class="apply-btn">Apply Now</button>
+            </div>
+
+            <div class="job-card">
+                <h2 class="job-title">Project Manager</h2>
+                <p class="job-details"><strong>Company:</strong> Construction Solutions</p>
+                <p class="job-details"><strong>Location:</strong> Sylhet, Bangladesh</p>
+                <p class="job-details"><strong>Salary:</strong> $2500-$3500/month</p>
+                <button class="apply-btn">Apply Now</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Services</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background: url('/css/bgimg/111.png') bottom center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .container {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #008000;
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+
+        .flight-list {
+            display: grid;
+            gap: 20px;
+        }
+
+        .flight-card {
+            background-color: rgba(204, 255, 204, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .flight-title {
+            color: #006400;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .flight-details {
+            color: #006400;
+            margin-bottom: 5px;
+        }
+
+        .book-btn {
+            background-color: #008000;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .book-btn:hover {
+            background-color: #006400;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Available Flight Services</h1>
+        <div class="flight-list">
+            <!-- Singapore Airlines -->
+            <div class="flight-card">
+                <h2 class="flight-title">Singapore Airlines</h2>
+                <button class="book-btn" onclick="window.location.href='https://www.singaporeair.com/en_UK/bd/home?gad_source=1&gclid=Cj0KCQiAlbW-BhCMARIsADnwasp8SU1MkRbflAMSe2fBY3OiydaNKJ62KVZO-MdXt-BmI5Bl2UZVazkaAvvQEALw_wcB&gclsrc=aw.ds#/book/bookflight'">Book Now</button>
+            </div>
+
+            <!-- Emirates -->
+            <div class="flight-card">
+                <h2 class="flight-title">Emirates</h2>
+                <button class="book-btn" onclick="window.location.href='https://www.emirates.com'">Book Now</button>
+            </div>
+
+            <!-- Qatar Airways -->
+            <div class="flight-card">
+                <h2 class="flight-title">Qatar Airways</h2>
+                <button class="book-btn" onclick="window.location.href='https://www.qatarairways.com'">Book Now</button>
+            </div>
+
+            <!-- British Airways -->
+            <div class="flight-card">
+                <h2 class="flight-title">British Airways</h2>
+                <button class="book-btn" onclick="window.location.href='https://www.britishairways.com'">Book Now</button>
+            </div>
+
+            <!-- Lufthansa -->
+            <div class="flight-card">
+                <h2 class="flight-title">Lufthansa</h2>
+                <button class="book-btn" onclick="window.location.href='https://www.lufthansa.com'">Book Now</button>
+            </div>
+
+            <!-- Cathay Pacific -->
+            <div class="flight-card">
+                <h2 class="flight-title">Cathay Pacific</h2>
+                <button class="book-btn" onclick="window.location.href='https://www.cathaypacific.com'">Book Now</button>
+            </div>
+            <div class="flight-card">
+                <h2 class="flight-title">Delta Air Lines</h2>
+                <button class="book-btn" onclick="window.location.href='https:https://www.delta.com/">Book Now</button>
+            </div>
+            <div class="flight-card">
+                <h2 class="flight-title">Air France</h2>
+                <button class="book-btn" onclick="window.location.href='https:https:https://wwws.airfrance.fr/splash">Book Now</button>
+            </div>
+            <div class="flight-card">
+                <h2 class="flight-title">Turkish Airlines</h2>
+                <button class="book-btn" onclick="window.location.href='https:https:https:https://www.turkishairlines.com/">Book Now</button>
+            </div>
+            <div class="flight-card">
+                <h2 class="flight-title">AirAsia</h2>
+                <button class="book-btn" onclick="window.location.href='https:https:https://www.airasia.com/en/gb">Book Now</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

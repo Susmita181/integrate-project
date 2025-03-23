@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital List</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background: url('/css/bgimg/111.png') bottom center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .container {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #008000;
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+
+        .hospital-list {
+            display: grid;
+            gap: 20px;
+        }
+
+        .hospital-card {
+            background-color: rgba(204, 255, 204, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .hospital-title {
+            color: #006400;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .hospital-details {
+            color: #006400;
+            margin-bottom: 5px;
+        }
+
+        .appointment-btn {
+            background-color: #008000;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .appointment-btn:hover {
+            background-color: #006400;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Available Hospitals</h1>
+        <div class="hospital-list">
+            <div class="hospital-card">
+                <h2 class="hospital-title">Square Hospital</h2>
+                <p class="hospital-details"><strong>Location:</strong> Panthapath, Dhaka</p>
+                <p class="hospital-details"><strong>Available Slots:</strong> 10:00 AM - 8:00 PM</p>
+                <p class="hospital-details"><strong>Consultation Fee:</strong> 1000 BDT</p>
+                <button class="appointment-btn">Book Appointment</button>
+            </div>
+
+            <div class="hospital-card">
+                <h2 class="hospital-title">Apollo Hospital</h2>
+                <p class="hospital-details"><strong>Location:</strong> Bashundhara, Dhaka</p>
+                <p class="hospital-details"><strong>Available Slots:</strong> 9:00 AM - 9:00 PM</p>
+                <p class="hospital-details"><strong>Consultation Fee:</strong> 1200 BDT</p>
+                <button class="appointment-btn">Book Appointment</button>
+            </div>
+
+            <div class="hospital-card">
+                <h2 class="hospital-title">United Hospital</h2>
+                <p class="hospital-details"><strong>Location:</strong> Gulshan, Dhaka</p>
+                <p class="hospital-details"><strong>Available Slots:</strong> 8:00 AM - 10:00 PM</p>
+                <p class="hospital-details"><strong>Consultation Fee:</strong> 1500 BDT</p>
+                <button class="appointment-btn">Book Appointment</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
